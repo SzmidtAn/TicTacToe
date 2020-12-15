@@ -14,6 +14,8 @@
 		1EB668A92588E33C00677220 /* TicTacToe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1EB668A72588E33C00677220 /* TicTacToe.xcdatamodeld */; };
 		1EB668AB2588E34000677220 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EB668AA2588E34000677220 /* Assets.xcassets */; };
 		1EB668AE2588E34000677220 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EB668AC2588E34000677220 /* LaunchScreen.storyboard */; };
+		1EB668B82588E97B00677220 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB668B72588E97B00677220 /* GameModel.swift */; };
+		1EB668C125890EC100677220 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB668C025890EC100677220 /* MyCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		1EB668AA2588E34000677220 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1EB668AD2588E34000677220 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1EB668AF2588E34000677220 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1EB668B72588E97B00677220 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
+		1EB668C025890EC100677220 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				1EB668AC2588E34000677220 /* LaunchScreen.storyboard */,
 				1EB668AF2588E34000677220 /* Info.plist */,
 				1EB668A72588E33C00677220 /* TicTacToe.xcdatamodeld */,
+				1EB668B72588E97B00677220 /* GameModel.swift */,
+				1EB668C025890EC100677220 /* MyCollectionViewCell.swift */,
 			);
 			path = TicTacToe;
 			sourceTree = "<group>";
@@ -141,6 +147,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1EB668A32588E33C00677220 /* ViewController.swift in Sources */,
+				1EB668B82588E97B00677220 /* GameModel.swift in Sources */,
+				1EB668C125890EC100677220 /* MyCollectionViewCell.swift in Sources */,
 				1EB6689F2588E33C00677220 /* AppDelegate.swift in Sources */,
 				1EB668A92588E33C00677220 /* TicTacToe.xcdatamodeld in Sources */,
 				1EB668A12588E33C00677220 /* SceneDelegate.swift in Sources */,
