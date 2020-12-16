@@ -32,10 +32,16 @@ class ViewController: UIViewController  {
 
     }
 
-    @IBAction func tap(_ sender: UITapGestureRecognizer) {
-                
-        var img = sender.view as! UIImageView
-
+    func playAgain(){
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "gameView") as! ViewController
+        self.present(nextViewController, animated:true, completion:nil)
+    }
+    
+    func doMove(Img: UIImageView){
+        
+        let img = Img
+        
         let position = img.restorationIdentifier
         
         
@@ -54,6 +60,9 @@ class ViewController: UIViewController  {
             if vinner == true {
                 playerLabel.text = "Win"
          //       self.view.isUserInteractionEnabled = false
+
+                let alert = gameModel.showDialogVinner()
+           present(alert, animated: true)
 
                 self.reloadInputViews()
 
@@ -75,6 +84,8 @@ class ViewController: UIViewController  {
                 player2Label.text = "Win"
          //       self.view.isUserInteractionEnabled = false
 
+                let alert = gameModel.showDialogVinner()
+           present(alert, animated: true)
                 self.reloadInputViews()
             }
         }
@@ -82,6 +93,15 @@ class ViewController: UIViewController  {
 
      
  
+    }
+
+    @IBAction func tap(_ sender: UITapGestureRecognizer) {
+                
+        let img = sender.view as! UIImageView
+
+
+        doMove(Img: img)
+        
     
 }
 }

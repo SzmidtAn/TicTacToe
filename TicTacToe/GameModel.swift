@@ -40,12 +40,28 @@ class GameModel {
 
             }
         
+         
         
         }
+   
         
         return vinner
     }
 
-    
+    func showDialogVinner() -> UIAlertController{
+        let alert = UIAlertController(title: "Vinner!", message: "Player vinner", preferredStyle: .alert)
+        let startSidaButton = UIAlertAction(title: "Go to menu" , style: .cancel)
+        let continueGameButton = UIAlertAction(title: "Play again", style: .default){action in
+            let view = ViewController()
+            view.playAgain()
+            
+            
+        }
+        alert.addAction(startSidaButton)
+        alert.addAction(continueGameButton)
+        
+
+        return alert
+    }
     
 }
