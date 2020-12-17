@@ -119,8 +119,8 @@
                     </view>
                     <connections>
                         <outlet property="item0" destination="lEU-Yo-tnf" id="Sej-2R-IXB"/>
-                        <outlet property="player2Label" destination="oQh-Ld-V75" id="w4t-Nz-WLt"/>
-                        <outlet property="playerLabel" destination="8S1-Ry-Aup" id="oGj-Oo-aAv"/>
+                        <outlet property="player2Label" destination="oQh-Ld-V75" id="j7J-tw-zu6"/>
+                        <outlet property="playerLabel" destination="8S1-Ry-Aup" id="TU4-wn-IV7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

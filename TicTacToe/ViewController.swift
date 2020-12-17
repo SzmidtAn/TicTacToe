@@ -16,7 +16,7 @@ class ViewController: UIViewController  {
     var vinner: Bool = false
     let gameModel = GameModel()
     
-    var items = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+    var gameState = ["0", "0", "0", "0", "0", "0", "0", "0", "0"]
 
     @IBOutlet weak var item0: UIImageView!
     @IBOutlet weak var item1: UIImageView!
@@ -43,6 +43,7 @@ class ViewController: UIViewController  {
         let img = Img
         
         let position = img.restorationIdentifier
+        let positionInt = Int(position!)
         
         
         switch player {
@@ -52,11 +53,9 @@ class ViewController: UIViewController  {
             player2Label.textColor = UIColor.red
             playerLabel.textColor = UIColor.black
 
-            gameModel.listOfPlayersMoves.append(position!)
-            gameModel.listOfPlayersMoves.sort()
-            print(gameModel.listOfPlayersMoves)
-           vinner =  gameModel.checkIfVinner(list: gameModel.listOfPlayersMoves)
-            
+            gameState[positionInt!] = "O"
+            vinner = gameModel.checkIfVinner(gameState: gameState)
+
             if vinner == true {
                 playerLabel.text = "Win"
          //       self.view.isUserInteractionEnabled = false
@@ -75,11 +74,11 @@ class ViewController: UIViewController  {
             player = 1
             playerLabel.textColor = UIColor.red
             player2Label.textColor = UIColor.black
-            gameModel.listOfPlayer2sMoves.append(position!)
-            gameModel.listOfPlayer2sMoves.sort()
-            print(gameModel.listOfPlayer2sMoves)
-            vinner = gameModel.checkIfVinner(list: gameModel.listOfPlayer2sMoves)
 
+            gameState[positionInt!] = "X"
+
+            vinner = gameModel.checkIfVinner(gameState: gameState)
+            
             if vinner == true {
                 player2Label.text = "Win"
          //       self.view.isUserInteractionEnabled = false
@@ -90,6 +89,8 @@ class ViewController: UIViewController  {
             }
         }
         img.isUserInteractionEnabled = false
+        
+        print(gameState)
 
      
  
