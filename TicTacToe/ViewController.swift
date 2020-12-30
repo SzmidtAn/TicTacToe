@@ -36,7 +36,19 @@ class ViewController: UIViewController  {
         playerLabel.textColor = UIColor.red
         playerLabel.text = playerName
         player2Label.text = player2Name
+        
+        if playerName == ""{
+            playerLabel.text = "Player 1"
+        }
+        if player2Name == ""{
+            player2Label.text = "Player 2"
+        }
     }
+    
+    
+    
+
+    
 
     func doMove(Img: UIImageView){
         
@@ -65,7 +77,7 @@ class ViewController: UIViewController  {
             if vinner == true {
 
                 pointsPlayer1 += 1
-              showDialogVinner(player: "Player 1")
+              showDialogVinner(player: playerName)
         
             }
         default:
@@ -82,7 +94,7 @@ class ViewController: UIViewController  {
 
                 pointsPlayer2 += 1
                 
-            showDialogVinner(player: "Player 2")
+            showDialogVinner(player: player2Name)
             }
         }
         
@@ -134,7 +146,11 @@ class ViewController: UIViewController  {
     
     func showDialogVinner(player: String){
         let alert = UIAlertController(title: "Victory!", message: player + " won", preferredStyle: .alert)
-        let startSidaButton = UIAlertAction(title: "Go to menu" , style: .cancel)
+        let startSidaButton = UIAlertAction(title: "Go to menu" , style: .cancel){_ in
+            
+            self.performSegue(withIdentifier: "goHome", sender: self)
+            
+        }
         let continueGameButton = UIAlertAction(title: "Play again", style: .default){ [self]action in
 
 

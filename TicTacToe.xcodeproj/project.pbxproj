@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E459219259CC606005E622F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E459218259CC606005E622F /* HomeViewController.swift */; };
 		1EB6689F2588E33C00677220 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB6689E2588E33C00677220 /* AppDelegate.swift */; };
 		1EB668A12588E33C00677220 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB668A02588E33C00677220 /* SceneDelegate.swift */; };
 		1EB668A32588E33C00677220 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB668A22588E33C00677220 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E459218259CC606005E622F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		1EB6689B2588E33C00677220 /* TicTacToe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicTacToe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EB6689E2588E33C00677220 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1EB668A02588E33C00677220 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				1EB668A72588E33C00677220 /* TicTacToe.xcdatamodeld */,
 				1EB668B72588E97B00677220 /* GameModel.swift */,
 				1EB668C025890EC100677220 /* MyCollectionViewCell.swift */,
+				1E459218259CC606005E622F /* HomeViewController.swift */,
 			);
 			path = TicTacToe;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 				1EB668C125890EC100677220 /* MyCollectionViewCell.swift in Sources */,
 				1EB6689F2588E33C00677220 /* AppDelegate.swift in Sources */,
 				1EB668A92588E33C00677220 /* TicTacToe.xcdatamodeld in Sources */,
+				1E459219259CC606005E622F /* HomeViewController.swift in Sources */,
 				1EB668A12588E33C00677220 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

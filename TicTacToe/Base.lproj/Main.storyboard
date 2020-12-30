@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tw4-Tb-zFZ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
@@ -40,14 +40,6 @@
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="WVH-cO-veD" appends="YES" id="sMM-YX-Cjr"/>
-                                </connections>
-                            </imageView>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="3" translatesAutoresizingMaskIntoConstraints="NO" id="Jrc-aH-7e1">
-                                <rect key="frame" x="0.0" y="414" width="131" height="136"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="BA5-7q-B9J" appends="YES" id="CFT-f5-QkK"/>
                                 </connections>
                             </imageView>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="5" translatesAutoresizingMaskIntoConstraints="NO" id="leF-qR-cOV">
@@ -121,10 +113,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="3" translatesAutoresizingMaskIntoConstraints="NO" id="Jrc-aH-7e1">
+                                <rect key="frame" x="0.0" y="414" width="131" height="136"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="BA5-7q-B9J" appends="YES" id="CFT-f5-QkK"/>
+                                </connections>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="kHH-Sh-aws"/>
                     <connections>
                         <outlet property="item0" destination="DFx-UM-eTa" id="VoX-fs-601"/>
                         <outlet property="player2Label" destination="oQh-Ld-V75" id="j7J-tw-zu6"/>
@@ -139,6 +140,7 @@
                         <outletCollection property="iv" destination="QvF-Kb-6JS" collectionClass="NSMutableArray" id="kl8-9b-d8k"/>
                         <outletCollection property="iv" destination="QAe-ed-Qab" collectionClass="NSMutableArray" id="c6O-3k-QGa"/>
                         <outletCollection property="iv" destination="u9Z-ch-tRH" collectionClass="NSMutableArray" id="fmA-MG-xEb"/>
+                        <segue destination="tw4-Tb-zFZ" kind="presentation" identifier="goHome" modalPresentationStyle="currentContext" id="YLO-jM-L35"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -157,11 +159,6 @@
                         <action selector="tap:" destination="BYZ-38-t0r" id="QOB-ho-8Ct"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer id="BA5-7q-B9J">
-                    <connections>
-                        <action selector="tap:" destination="BYZ-38-t0r" id="qYk-fG-wPw"/>
-                    </connections>
-                </tapGestureRecognizer>
                 <tapGestureRecognizer id="0b7-xM-gvo">
                     <connections>
                         <action selector="tap:" destination="BYZ-38-t0r" id="fIi-13-VSc"/>
@@ -170,6 +167,11 @@
                 <tapGestureRecognizer id="QH7-i0-t33">
                     <connections>
                         <action selector="tap:" destination="BYZ-38-t0r" id="FAr-Kb-P9t"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="BA5-7q-B9J">
+                    <connections>
+                        <action selector="tap:" destination="BYZ-38-t0r" id="qYk-fG-wPw"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="Udm-rs-w8C">
@@ -190,8 +192,89 @@
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="99.776785714285708"/>
         </scene>
+        <!--Home View Controller-->
+        <scene sceneID="5jk-zE-I9z">
+            <objects>
+                <viewController id="tw4-Tb-zFZ" customClass="HomeViewController" customModule="TicTacToe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="OiP-SG-eld">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="17580" translatesAutoresizingMaskIntoConstraints="NO" id="Mwd-1F-7ha">
+                                <rect key="frame" x="-26" y="-16" width="465" height="928"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eQh-bp-1Ey">
+                                <rect key="frame" x="201" y="400" width="131" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="getPlayers1Name:" destination="ddg-fz-grG" eventType="editingDidEnd" id="6YG-yO-DuI"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gLb-Aj-VRQ">
+                                <rect key="frame" x="141" y="597" width="131" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.28902895119999999" blue="0.54335014960000005" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Play">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPresed:" destination="ddg-fz-grG" eventType="touchUpInside" id="3Na-Hl-Cm6"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="playGame" modalPresentationStyle="currentContext" id="iYw-FW-GTc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E4o-BL-RIE">
+                                <rect key="frame" x="103" y="403" width="80" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HhF-3D-Rjh">
+                                <rect key="frame" x="103" y="465" width="83" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tic Tac Toe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y2P-Kq-qW6">
+                                <rect key="frame" x="119" y="155" width="174" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="33"/>
+                                <color key="textColor" red="0.77091295689999995" green="0.22281616339999999" blue="0.41887567050000002" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n3Z-Ds-Fbb">
+                                <rect key="frame" x="201" y="462" width="131" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lyU-CI-9iV"/>
+                        <color key="backgroundColor" red="0.95624778200000005" green="0.14149318259999999" blue="0.1004026152" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.73872509200000003" green="0.05340285987" blue="0.73800033840000001" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="GJh-Fe-fgy"/>
+                    <connections>
+                        <outlet property="getPlayer1Name" destination="eQh-bp-1Ey" id="dgF-J4-MhO"/>
+                        <outlet property="getPlayer2Name" destination="n3Z-Ds-Fbb" id="pIu-ZG-j6w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8YD-eZ-Gjn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="ddg-fz-grG" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="921.73913043478262" y="88.392857142857139"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="17580" width="6001" height="4001"/>
         <image name="Preview" width="621" height="1104"/>
         <image name="ccc" width="150" height="180"/>
         <image name="circ" width="150" height="180"/>
