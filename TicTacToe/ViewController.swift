@@ -15,6 +15,7 @@ class ViewController: UIViewController  {
     @IBOutlet weak var playerLabel: UILabel!
     var player = 1
     var vinner: Bool = false
+    var computerIsPlaying = false
     let gameModel = GameModel()
     
     var gameState = ["0", "0", "0", "0", "0", "0", "0", "0", "0"]
@@ -53,8 +54,6 @@ class ViewController: UIViewController  {
     func doMove(Img: UIImageView){
         
 
-        
-        
         let img = Img
         
         let position = img.restorationIdentifier
@@ -114,10 +113,18 @@ class ViewController: UIViewController  {
         let img = sender.view as! UIImageView
 
 
-        doMove(Img: img)
+        if computerIsPlaying == false {
+            doMove(Img: img)
+        }else{
+            doMoveWithComputer(Img : img)
+        }
         
     
 }
+    
+    func doMoveWithComputer(Img: UIImageView){
+        
+    }
     
 
     

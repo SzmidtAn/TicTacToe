@@ -256,6 +256,24 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iJa-o5-5ry">
+                                <rect key="frame" x="199" y="686" width="16" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UWn-N2-Vrh">
+                                <rect key="frame" x="102" y="715" width="209" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                <state key="normal" title="Play with computer">
+                                    <color key="titleColor" red="0.91554724310000002" green="0.26461965939999998" blue="0.49746273149999998" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="playWithComp:" destination="tw4-Tb-zFZ" eventType="touchUpInside" id="t85-0a-72b"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lyU-CI-9iV"/>
                         <color key="backgroundColor" red="0.95624778200000005" green="0.14149318259999999" blue="0.1004026152" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
@@ -270,7 +288,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8YD-eZ-Gjn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="ddg-fz-grG" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="921.73913043478262" y="88.392857142857139"/>
+            <point key="canvasLocation" x="-729" y="100"/>
         </scene>
     </scenes>
     <resources>
