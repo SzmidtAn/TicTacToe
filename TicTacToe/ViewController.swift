@@ -35,15 +35,17 @@ class ViewController: UIViewController  {
         super.viewDidLoad()
         vinner = false
         playerLabel.textColor = UIColor.red
+   
+        if playerName == ""{
+            playerName = "Player 1"
+        }
+        if player2Name == ""{
+            player2Name = "Player 2"
+        }
         playerLabel.text = playerName
         player2Label.text = player2Name
         
-        if playerName == ""{
-            playerLabel.text = "Player 1"
-        }
-        if player2Name == ""{
-            player2Label.text = "Player 2"
-        }
+        
     }
     
     
@@ -103,8 +105,6 @@ class ViewController: UIViewController  {
         }else{
             numberOfMoves += 1
         
-     
- 
     }
     }
 
@@ -123,10 +123,88 @@ class ViewController: UIViewController  {
 }
     
     func doMoveWithComputer(Img: UIImageView){
+        let img = Img
+        
+        let position = img.restorationIdentifier
+        let positionInt = Int(position!)
+        img.isUserInteractionEnabled = false
+
+        
+        
+            img.image = UIImage(named: "circ")
+            player = 2
+            player2Label.textColor = UIColor.red
+            playerLabel.textColor = UIColor.black
+
+            gameState[positionInt!] = "O"
+
+            vinner = gameModel.checkIfVinner(gameState: gameState)
+
+            if vinner == true {
+
+                pointsPlayer1 += 1
+              showDialogVinner(player: playerName)
+        
+            }else {
+
+                if numberOfMoves == 8 && vinner == false{
+                    showDialogVinner(player: "Nobody")
+                }else{
+                    computerDoMove()
+                    numberOfMoves += 2
+                    print(numberOfMoves)
+                
+            }
+
+            }
+        
+        
         
     }
     
+    func ckechIfEnabled() -> UIImageView{
+        
+        let randomNumber = Int.random(in: 0...8)
+        
+        var img = iv[randomNumber]
+        
+        if img.isUserInteractionEnabled == false{
+        img =   ckechIfEnabled()
+            
+        }
+        
+        return img
+    }
 
+    func computerDoMove(){
+    
+        
+     var img = ckechIfEnabled()
+        
+  
+        
+        let position = img.restorationIdentifier
+        let positionInt = Int(position!)
+        img.isUserInteractionEnabled = false
+
+        
+        
+        img.image = UIImage(named: "ccc")
+        player = 1
+        playerLabel.textColor = UIColor.red
+        player2Label.textColor = UIColor.black
+
+        gameState[positionInt!] = "X"
+
+        vinner = gameModel.checkIfVinner(gameState: gameState)
+        
+        if vinner == true {
+
+            pointsPlayer2 += 1
+            
+        showDialogVinner(player: player2Name)
+        }
+    }
     
     func startNewGame(){
         
@@ -140,6 +218,7 @@ class ViewController: UIViewController  {
         for i in iv{
             i.image = nil
             i.isUserInteractionEnabled = true
+            print(i)
             
         }
         
